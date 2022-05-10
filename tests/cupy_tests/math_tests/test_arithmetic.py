@@ -190,6 +190,9 @@ class ArithmeticBinaryBase:
         np2 = numpy.asarray(arg2)
         dtype1 = np1.dtype
         dtype2 = np2.dtype
+        if self.name=='heaviside':
+            if dtype2 in complex_types and (np1==0).any():
+                return xp.array(True)
 
         if self.name == 'power' or self.name == 'float_power':
             # TODO(niboshi): Fix this: power(0, 1j)
