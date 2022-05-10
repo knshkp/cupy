@@ -148,6 +148,7 @@ Arithmetic operations
    modf
    remainder
    divmod
+   heaviside
 
 
 Handling complex numbers
