@@ -645,7 +645,7 @@ from cupy._math.arithmetic import conjugate as conj  # NOQA
 from cupy._math.arithmetic import conjugate  # NOQA
 from cupy._math.arithmetic import imag  # NOQA
 from cupy._math.arithmetic import real  # NOQA
-
+from cupy._math.airthmetic import heaviside
 from cupy._math.misc import absolute as abs  # NOQA
 from cupy._math.misc import absolute  # NOQA
 from cupy._math.misc import cbrt  # NOQA
