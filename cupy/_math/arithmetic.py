@@ -122,6 +122,24 @@ float_power = _core.create_ufunc(
 
     '''
 )
+def if1(in0,in1):
+    if in0<0:
+        return 0
+    elif in0==0:
+        return in1
+    elif in0>0:
+        return 1
+    
+heaviside=_core.create_unfunc(
+    'cupy_heaviside',
+    (('dd->d'),
+     ('DD->D', 'out0 = in1 == in1_type(0) ? in1_type(1): if1(in0, in1)'))
+    'out0 = pow(in0, in1)',
+    doc='''First array elements raised to powers from second array, element-wise.
+    .. seealso:: :data:`numpy.float_power`
+    '''
+)
+   
 
 fmod = _core.create_ufunc(
     'cupy_fmod',
