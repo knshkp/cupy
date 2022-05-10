@@ -29,7 +29,7 @@ no_complex_types = [numpy.bool_] + float_types + int_types
         'nargs': [2],
         'name': [
             'add', 'multiply', 'divide', 'power', 'subtract', 'true_divide',
-            'floor_divide', 'float_power', 'fmod', 'remainder'],
+            'floor_divide', 'float_power', 'fmod', 'remainder','heaviside'],
     })
 ))
 class TestArithmeticRaisesWithNumpyInput:
